@@ -31,5 +31,4 @@ a {
     border-radius: 10px;
     font-size: 18px;
 }
-<a href="https://wa.me/212600000000" target="_blank">اطلب عبر واتساب</a>
 
