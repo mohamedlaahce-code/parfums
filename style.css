@@ -27,27 +27,6 @@ p {
 
 .gallery img {
     width: 250px;
-    border-radius: 20px;
-    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-    transition: transform 0.3s ease;
-}
-
-.gallery img:hover {
-    transform: scale(1.08);
-}
-
-a {
-    display: inline-block;
-    margin: 30px 0;
-    padding: 15px 30px;
-    background-color: #25d366;
-    color: white;
-    text-decoration: none;
-    font-size: 20px;
-    border-radius: 30px;
-    box-shadow: 0 8px 15px rgba(0,0,0,0.2);
-}
-
-a:hover {
-    background-color: #1ebc59;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
 }
