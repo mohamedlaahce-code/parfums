@@ -67,3 +67,18 @@ p {
 .whatsapp:hover {
     background-color: #1ebe5d;
 }
+.product .whatsapp {
+    display: inline-block;
+    margin: 10px auto 0;
+    padding: 10px 20px;
+    background-color: #25D366;
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.product .whatsapp:hover {
+    background-color: #1ebe5d;
+}
