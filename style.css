@@ -95,3 +95,15 @@ p {
     background-color: #1ebe5d;
     transform: scale(1.05);
 }
+/* تصميم خاص بالهاتف */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .product {
+        width: 90%;
+        max-width: 350px;
+    }
+}
