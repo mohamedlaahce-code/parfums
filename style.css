@@ -1,35 +1,28 @@
 /* الخط العام والخلفية */
 body {
     font-family: 'Arial', sans-serif;
-    background: linear-gradient(to bottom, #fff1e6, #fefefe);
-    margin: 0;
-    padding: 0;
-    text-align: center;
-}
-
-body {
-    font-family: 'Arial', sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #fff; /* إذا بغينا النصوص تبان فوق الخلفية */
+    color: #fff; /* النصوص تظهر فوق الخلفية */
 }
 
 /* العنوان */
 h1 {
     margin-top: 40px;
     font-size: 44px;
-    color: #5a2d0c;
-    text-shadow: 2px 2px 5px rgba(0,0,0,0.2);
+    color: #fff;
+    text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
 }
 
 /* فقرة الترحيب */
 p {
     font-size: 20px;
-    color: #444;
+    color: #fff;
     margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
 }
 
 /* معرض الصور */
@@ -43,15 +36,14 @@ p {
 
 /* كل عطر */
 .product {
-    background: #fff;
-    padding: 20px;
+    background: rgba(255,255,255,0.8); /* شفاف جزئياً */
+    width: 220px;
+    padding: 15px;
     border-radius: 20px;
-    width: 260px;
     display: inline-block;
     margin: 15px;
-    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
     transition: transform 0.3s, box-shadow 0.3s, background 0.3s;
-    position: relative;
     overflow: hidden;
 }
 
@@ -105,18 +97,20 @@ p {
     background-color: #1ebe5d;
     transform: scale(1.05);
 }
+
 /* تصميم خاص بالهاتف */
 @media (max-width: 768px) {
     .gallery {
         flex-direction: column;
         align-items: center;
     }
-
     .product {
         width: 90%;
-        max-width: 350px;
+        max-width: 300px;
+        margin: 15px auto;
     }
 }
+
 /* زر واتساب ثابت */
 .whatsapp-fixed {
     position: fixed;
@@ -135,5 +129,3 @@ p {
 .whatsapp-fixed:hover {
     background-color: #1ebe5d;
 }
-h1 { color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
-.product { background: rgba(255,255,255,0.8); width: 220px; ... }
