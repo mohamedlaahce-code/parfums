@@ -106,16 +106,18 @@ p {
 
 /* تصميم خاص بالهاتف */
 @media (max-width: 768px) {
-    ..product {
+    .gallery {
         flex-direction: column;
         align-items: center;
     }
+
     .product {
         width: 85%;
-        max-width:  260px;
+        max-width: 260px;
         margin: 15px auto;
     }
 }
+
 
 /* زر واتساب ثابت */
 .whatsapp-fixed {
