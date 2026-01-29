@@ -135,3 +135,5 @@ p {
 .whatsapp-fixed:hover {
     background-color: #1ebe5d;
 }
+h1 { color: #fff; text-shadow: 2px 2px 8px rgba(0,0,0,0.5); }
+.product { background: rgba(255,255,255,0.8); width: 220px; ... }
