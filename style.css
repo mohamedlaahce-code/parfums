@@ -107,3 +107,21 @@ p {
         max-width: 350px;
     }
 }
+/* زر واتساب ثابت */
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    z-index: 999;
+}
+
+.whatsapp-fixed:hover {
+    background-color: #1ebe5d;
+}
