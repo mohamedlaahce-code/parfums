@@ -1,398 +1,30 @@
-/* الخط العام والخلفية */
+/* ===== الأساس ===== */
 body {
-    font-family: 'Arial', sans-serif;
+    font-family: Arial, sans-serif;
     background: url('background.jpg') no-repeat center center fixed;
     background-size: cover;
     margin: 0;
     padding: 0;
     text-align: center;
-    color: #fff; /* النصوص تظهر فوق الخلفية */
-}
-
-/* العنوان */
-h1 {
-    margin-top: 15px; /* شوية مسافة من الأعلى */
-    font-size: 44px;  /* تكبير شوية للعنوان */
-    color: #f5e6c8;  /* ذهبي فاتح */
-    letter-spacing: 2px;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.7);
-    line-height: 1.2; /* يخلي السطر مرتب */
-}
-
-p {
-    font-size: 20px;
     color: #fff;
-    margin-top: 5px;      /* يقلل الفراغ بين العنوان والفقرة */
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
-    line-height: 1.5;     /* يسهل القراءة */
 }
 
-
-/* معرض الصور */
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 30px 0;
-}
-
-/* كل عطر */
-.product {
- background: rgba(255,255,255,0.25);   
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 20px;
-    border-radius: 25px;
-    width: 220px;
-    margin: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    transition: all 0.4s ease;
-}
-
-
-/* تأثير عند المرور بالماوس */
-.product:hover {
-    transform: translateY(-12px) scale(1.05);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-    background: rgba(255,255,255,0.22);
-}
-
-
-/* الصور */
-.product img {
-    width: 100%;
-    border-radius: 20px;
-    transition: transform 0.5s ease;
-}
-
-.product:hover img {
-    transform: scale(1.12) rotate(-1deg);
-}
-
-
-/* اسم العطر */
-.product h3 {
-    margin: 15px 0 5px;
-     color: #3a1f0a;
-    letter-spacing: 1px;
-    font-size: 20px;
-}
-
-/* الثمن */
-.price {
-    color: #b85c00;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* زر واتساب لكل عطر */
-.product .whatsapp {
-    display: inline-block;
-    margin: 15px auto 0;
-    padding: 10px 20px;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.product .whatsapp:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
-}
-
-/* تصميم خاص بالهاتف */
-@media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product {
-        width: 85%;
-        max-width: 260px;
-        margin: 15px auto;
-    }
-}
-
-
-/* زر واتساب ثابت */
-.whatsapp-fixed {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 18px;
-    border-radius: 50%;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    z-index: 999;
-}
-
-.whatsapp-fixed:hover {
-    background-color: #1ebe5d;
-}
-.product {
-    animation: cinematic 1.2s cubic-bezier(.2,.8,.2,1) forwards;
-    opacity: 0;
-}
-
-@keyframes cinematic {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-h1, p {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInText 1s ease forwards;
-}
-
-h1 {
-    animation-delay: 0.3s; /* العنوان يدخل أول */
-}
-
-p {
-    animation-delay: 0.8s; /* الفقرة تدخل بعد شوية */
-}
-
-@keyframes fadeInText {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-}
-
-.whatsapp-fixed {
-    animation: pulse 2s infinite;
-}
-h1:hover {
-    text-shadow: 0 0 20px #f5e6c8, 0 0 30px #f5e6c8;
-    transition: text-shadow 0.5s ease;
-}
-/* الخط العام والخلفية */
-body {
-    font-family: 'Arial', sans-serif;
-    background: url('background.jpg') no-repeat center center fixed;
-    background-size: cover;
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    color: #fff; /* النصوص تظهر فوق الخلفية */
-}
-
-/* العنوان */
-h1 {
-    margin-top: 15px; /* شوية مسافة من الأعلى */
-    font-size: 44px;  /* تكبير شوية للعنوان */
-    color: #f5e6c8;  /* ذهبي فاتح */
-    letter-spacing: 2px;
-    text-shadow: 0 4px 15px rgba(0,0,0,0.7);
-    line-height: 1.2; /* يخلي السطر مرتب */
-}
-
-p {
-    font-size: 20px;
-    color: #fff;
-    margin-top: 5px;      /* يقلل الفراغ بين العنوان والفقرة */
-    margin-bottom: 40px;
-    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
-    line-height: 1.5;     /* يسهل القراءة */
-}
-
-
-/* معرض الصور */
-.gallery {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 30px;
-    margin: 30px 0;
-}
-
-/* كل عطر */
-.product {
- background: rgba(255,255,255,0.25);   
-    backdrop-filter: blur(12px);
-    -webkit-backdrop-filter: blur(12px);
-    border: 1px solid rgba(255,255,255,0.3);
-    padding: 20px;
-    border-radius: 25px;
-    width: 220px;
-    margin: 20px;
-    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
-    transition: all 0.4s ease;
-}
-
-
-/* تأثير عند المرور بالماوس */
-.product:hover {
-    transform: translateY(-12px) scale(1.05);
-    box-shadow: 0 25px 60px rgba(0,0,0,0.6);
-    background: rgba(255,255,255,0.22);
-}
-
-
-/* الصور */
-.product img {
-    width: 100%;
-    border-radius: 20px;
-    transition: transform 0.5s ease;
-}
-
-.product:hover img {
-    transform: scale(1.12) rotate(-1deg);
-}
-
-
-/* اسم العطر */
-.product h3 {
-    margin: 15px 0 5px;
-     color: #3a1f0a;
-    letter-spacing: 1px;
-    font-size: 20px;
-}
-
-/* الثمن */
-.price {
-    color: #b85c00;
-    font-weight: bold;
-    font-size: 18px;
-}
-
-/* زر واتساب لكل عطر */
-.product .whatsapp {
-    display: inline-block;
-    margin: 15px auto 0;
-    padding: 10px 20px;
-    background-color: #25D366;
-    color: white;
-    text-decoration: none;
-    font-size: 16px;
-    border-radius: 25px;
-    font-weight: bold;
-    transition: background-color 0.3s, transform 0.2s;
-}
-
-.product .whatsapp:hover {
-    background-color: #1ebe5d;
-    transform: scale(1.05);
-}
-
-/* تصميم خاص بالهاتف */
-@media (max-width: 768px) {
-    .gallery {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .product {
-        width: 85%;
-        max-width: 260px;
-        margin: 15px auto;
-    }
-}
-
-
-/* زر واتساب ثابت */
-.whatsapp-fixed {
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    background-color: #25D366;
-    color: white;
-    padding: 15px 18px;
-    border-radius: 50%;
-    font-size: 22px;
-    text-decoration: none;
-    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
-    z-index: 999;
-}
-
-.whatsapp-fixed:hover {
-    background-color: #1ebe5d;
-}
-.product {
-    animation: cinematic 1.2s cubic-bezier(.2,.8,.2,1) forwards;
-    opacity: 0;
-}
-
-@keyframes cinematic {
-    from {
-        opacity: 0;
-        transform: translateY(50px) scale(0.9);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0) scale(1);
-    }
-}
-h1, p {
-    opacity: 0;
-    transform: translateY(20px);
-    animation: fadeInText 1s ease forwards;
-}
-
-h1 {
-    animation-delay: 0.3s; /* العنوان يدخل أول */
-}
-
-p {
-    animation-delay: 0.8s; /* الفقرة تدخل بعد شوية */
-}
-
-@keyframes fadeInText {
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-@keyframes pulse {
-    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
-    70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
-    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
-}
-
-.whatsapp-fixed {
-    animation: pulse 2s infinite;
-}
-h1:hover {
-    text-shadow: 0 0 20px #f5e6c8, 0 0 30px #f5e6c8;
-    transition: text-shadow 0.5s ease;
-}
+/* ===== عنوان النار ===== */
 .fire-title {
+    margin-top: 20px;
     font-size: 60px;
     font-weight: bold;
-    color: #ffd700;
-    text-transform: uppercase;
     letter-spacing: 4px;
-    text-align: center;
+    color: #ffd700;
     text-shadow:
         0 0 5px #ff9a00,
-        0 0 10px #ff6a00,
-        0 0 20px #ff3c00,
-        0 0 40px #ff0000;
+        0 0 15px #ff6a00,
+        0 0 30px #ff3c00,
+        0 0 60px #ff0000;
     animation: fire 1.5s infinite alternate;
 }
 
+/* حركة النار */
 @keyframes fire {
     0% {
         text-shadow:
@@ -403,8 +35,116 @@ h1:hover {
     100% {
         text-shadow:
             0 0 10px #ffd700,
-            0 0 25px #ff6a00,
-            0 0 50px #ff0000;
+            0 0 30px #ff6a00,
+            0 0 60px #ff0000;
     }
 }
 
+/* ===== الفقرة ===== */
+p {
+    font-size: 20px;
+    margin-top: 5px;
+    margin-bottom: 40px;
+    text-shadow: 1px 1px 5px rgba(0,0,0,0.4);
+}
+
+/* ===== المعرض ===== */
+.gallery {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+/* ===== المنتج ===== */
+.product {
+    width: 220px;
+    padding: 20px;
+    border-radius: 25px;
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transition: 0.4s;
+    animation: cinematic 1.2s forwards;
+    opacity: 0;
+}
+
+.product:hover {
+    transform: translateY(-10px) scale(1.05);
+}
+
+/* دخول سينمائي */
+@keyframes cinematic {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== الصورة ===== */
+.product img {
+    width: 100%;
+    border-radius: 20px;
+}
+
+/* ===== اسم العطر ===== */
+.product h3 {
+    color: #3a1f0a;
+    margin: 15px 0 5px;
+}
+
+/* ===== السعر ===== */
+.price {
+    color: #b85c00;
+    font-weight: bold;
+}
+
+/* ===== زر واتساب ===== */
+.whatsapp {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: #25D366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 25px;
+    font-weight: bold;
+}
+
+.whatsapp:hover {
+    background: #1ebe5d;
+}
+
+/* ===== زر واتساب الثابت ===== */
+.whatsapp-fixed {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: #25D366;
+    color: white;
+    padding: 15px 18px;
+    border-radius: 50%;
+    font-size: 22px;
+    text-decoration: none;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.3);
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { box-shadow: 0 0 0 0 rgba(37,211,102,0.7); }
+    70% { box-shadow: 0 0 0 15px rgba(37,211,102,0); }
+    100% { box-shadow: 0 0 0 0 rgba(37,211,102,0); }
+}
+
+/* ===== الهاتف ===== */
+@media (max-width: 768px) {
+    .gallery {
+        flex-direction: column;
+        align-items: center;
+    }
+}
