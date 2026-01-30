@@ -378,4 +378,33 @@ h1:hover {
     text-shadow: 0 0 20px #f5e6c8, 0 0 30px #f5e6c8;
     transition: text-shadow 0.5s ease;
 }
+.fire-title {
+    font-size: 60px;
+    font-weight: bold;
+    color: #ffd700;
+    text-transform: uppercase;
+    letter-spacing: 4px;
+    text-align: center;
+    text-shadow:
+        0 0 5px #ff9a00,
+        0 0 10px #ff6a00,
+        0 0 20px #ff3c00,
+        0 0 40px #ff0000;
+    animation: fire 1.5s infinite alternate;
+}
+
+@keyframes fire {
+    0% {
+        text-shadow:
+            0 0 5px #ffb300,
+            0 0 15px #ff8000,
+            0 0 30px #ff4000;
+    }
+    100% {
+        text-shadow:
+            0 0 10px #ffd700,
+            0 0 25px #ff6a00,
+            0 0 50px #ff0000;
+    }
+}
 
