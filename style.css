@@ -148,3 +148,26 @@ p {
         align-items: center;
     }
 }
+.product {
+    background: rgba(255,255,255,0.25);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(255,255,255,0.3);
+    padding: 20px;
+    border-radius: 25px;
+    width: 220px;
+    margin: 20px;
+    box-shadow: 0 15px 40px rgba(0,0,0,0.5);
+    transition: transform 0.4s ease, box-shadow 0.4s ease, background 0.4s ease;
+}
+/* تأثير عند المرور بالماوس */
+.product:hover {
+    transform: translateY(-15px) scale(1.08);
+    box-shadow: 0 30px 70px rgba(0,0,0,0.6);
+    background: rgba(255,255,255,0.22);
+}
+
+/* الصور داخل المنتج عند المرور */
+.product:hover img {
+    transform: scale(1.15) rotate(-1deg);
+}
